@@ -10,6 +10,7 @@ ext {
 }
 
 dependencies {
+  compile "javax.xml.bind:jaxb-api:2.3.0"
   compile project(':springfox-core')
   compile project(':springfox-spi')
   testCompile libs.test
