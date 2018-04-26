@@ -47,9 +47,9 @@ class EntityFindOneExtractor implements EntityOperationsExtractor {
     if (crudMethods.hasFindOneMethod()) {
       HandlerMethod handler = new HandlerMethod(
           context.getRepositoryInstance(),
-          crudMethods.getFindOneMethod());
+          crudMethods.getFindOneMethod().get());
       ActionSpecification spec = new ActionSpecification(
-          actionName(entity, crudMethods.getFindOneMethod()),
+          actionName(entity, crudMethods.getFindOneMethod().get()),
           String.format("%s%s/{id}",
               context.basePath(),
               context.resourcePath()),

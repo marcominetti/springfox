@@ -53,9 +53,9 @@ class EntityFindAllExtractor implements EntityOperationsExtractor {
     if (crudMethods.hasFindAllMethod()) {
       HandlerMethod handler = new HandlerMethod(
           context.getRepositoryInstance(),
-          crudMethods.getFindAllMethod());
+          crudMethods.getFindAllMethod().get());
       ActionSpecification spec = new ActionSpecification(
-          actionName(entity, crudMethods.getFindAllMethod()),
+          actionName(entity, crudMethods.getFindAllMethod().get()),
           String.format("%s%s",
               context.basePath(),
               context.resourcePath()),

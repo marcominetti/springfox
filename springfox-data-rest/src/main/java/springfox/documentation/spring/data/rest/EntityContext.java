@@ -72,7 +72,7 @@ public class EntityContext {
   }
 
   public PersistentEntity<?, ?> entity() {
-    return entities.getPersistentEntity(resource.getDomainType());
+    return entities.getPersistentEntity(resource.getDomainType()).get();
   }
 
   public CrudMethods crudMethods() {

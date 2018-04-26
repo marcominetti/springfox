@@ -46,9 +46,9 @@ class EntityDeleteExtractor implements EntityOperationsExtractor {
     if (crudMethods.hasDelete()) {
       HandlerMethod handler = new HandlerMethod(
           context.getRepositoryInstance(),
-          crudMethods.getDeleteMethod());
+          crudMethods.getDeleteMethod().get());
       ActionSpecification spec = new ActionSpecification(
-          actionName(entity, crudMethods.getDeleteMethod()),
+          actionName(entity, crudMethods.getDeleteMethod().get()),
           String.format("%s%s/{id}",
               context.basePath(),
               context.resourcePath()),

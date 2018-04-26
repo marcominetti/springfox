@@ -30,6 +30,9 @@ trait GitVersionParser {
   }
 
   SemanticVersion parseTransform(String version, String buildSuffix) {
+    if (version == "") {
+      version = "2.9.0"
+    }
     def components = Splitter.on('.').split(version)
     if (Iterables.size(components) < 3) {
       throw new IllegalArgumentException("Not a valid version. Expecting a version of form <MAJOR.MINOR.PATCH> where " +

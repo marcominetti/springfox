@@ -47,7 +47,7 @@ class EntitySaveExtractor implements EntityOperationsExtractor {
     if (crudMethods.hasSaveMethod()) {
       HandlerMethod handler = new HandlerMethod(
           context.getRepositoryInstance(),
-          crudMethods.getSaveMethod());
+          crudMethods.getSaveMethod().get());
       RepositoryMetadata resource = context.getRepositoryMetadata();
       ActionSpecification put = saveActionSpecification(
           entity,
