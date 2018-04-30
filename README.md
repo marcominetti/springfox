@@ -1,3 +1,8 @@
+# Disclaimer
+
+This is a roughly patched version of the JDK 1.9 compatible Springfox fork of @eximius313, patched to also support some of the changes of the Spring Data Rest 3 API regarding optionals.
+One of the build files has been modified to return a default version for the import into Eclipse IDE to work.
+I hope to delete this fork as soon as a release of Springfox works with my Spring-boot 2.0 application, so please don't rely on it!
 
 # Springfox
 
